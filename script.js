@@ -71,6 +71,10 @@ const makeReport = (excelInfo) => {
     document.getElementById("encabezados").innerHTML = encabezados
     document.getElementById("contenido").innerHTML = content
 
+    imageSize()
+}
+
+const imageSize = () => {
     let images = document.querySelectorAll(".image")
     images.forEach(image => {
         image.style.width = `${document.getElementById("tamano").value}px`

@@ -21,7 +21,7 @@
         <input type="checkbox" name="tato" id="tato"> <label for="tato">Incluir columna "Tato"</label> |
 
         <label for="tamano">Elija el tamaño de la imagen:</label>
-        <select name="select" id="tamano">
+        <select name="select" id="tamano" onchange="imageSize();">
             <option value="30">30x30</option>
             <option value="40">40x40</option>
             <option value="50" selected>50x50</option>
@@ -29,6 +29,8 @@
             <option value="70">70x70</option>
             <option value="80">80x80</option>
           </select> |
+
+          <input type="reset" value="Reset"> |
 
         <input type='button' onclick='window.print();' value='Imprimir' />
     </form>
