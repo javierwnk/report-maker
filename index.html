@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Maker</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form enctype="multipart/form-data">
+        <input id="upload" type="file" name="files[]"> |
+        <input type="checkbox" name="tato" id="tato"> <label for="tato">Incluir columna "Tato"</label> |
+
+        <label for="tamano">Elija el tamaño de la imagen:</label>
+        <select name="select" id="tamano">
+            <option value="30">30x30</option>
+            <option value="40">40x40</option>
+            <option value="50" selected>50x50</option>
+            <option value="60">60x60</option>
+            <option value="70">70x70</option>
+            <option value="80">80x80</option>
+          </select> |
+
+        <input type='button' onclick='window.print();' value='Imprimir' />
+    </form>
+
+    <table>
+        <thead>
+            <tr id="encabezados">
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="contenido">
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('upload').addEventListener('change', handleFileSelect, false);
+
+    </script>
+</body>
+
+</html>
