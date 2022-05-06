@@ -51,7 +51,7 @@ const makeReport = (excelInfo) => {
 
         for (const key in objectRow) {
 
-            if (key == "Imagen") {
+            if (key.toLowerCase() == "imagen") {
                 content += `<td class="image"><img src="${objectRow[key]}"/></td>`
             } else {
                 content += `<td>${objectRow[key]}</td>`
