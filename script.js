@@ -81,3 +81,7 @@ const imageSize = () => {
         image.style.height = `${document.getElementById("tamano").value}px`
     } )
 }
+
+const writeTitle = () => {
+    document.getElementById("titleWrite").innerText = document.getElementById("title").value
+}

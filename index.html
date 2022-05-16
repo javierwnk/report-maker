@@ -30,10 +30,15 @@
             <option value="80">80x80</option>
           </select> |
 
+          <label for="title">Titulo del reporte</label>
+          <input type="text" name="title" id="title" oninput="writeTitle()"> | 
+
           <input type="reset" value="Reset"> |
 
         <input type='button' onclick='window.print();' value='Imprimir' />
     </form>
+
+    <h3 id="titleWrite"></h3>
 
     <table>
         <thead>
